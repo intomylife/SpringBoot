@@ -5,3 +5,6 @@
 
 ### SpringBoot 整合 MyBatis-Plus
 > 博客地址：[https://blog.csdn.net/qq_41402200/article/details/88891511](https://blog.csdn.net/qq_41402200/article/details/88891511)
+
+### springboot 整合 redis
+> 博客地址：[https://blog.csdn.net/qq_41402200/article/details/88952520](https://blog.csdn.net/qq_41402200/article/details/88952520)
