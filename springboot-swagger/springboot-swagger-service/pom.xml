@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 三坐标 -->
+    <groupId>com.zwc</groupId>
+    <artifactId>springboot-swagger-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <!-- 工程名称描述 -->
+    <name>springboot-swagger-service</name>
+    <description>服务工程</description>
+
+    <!-- 子模块 -->
+    <modules>
+        <module>springboot-swagger-base-service</module>
+    </modules>
+
+    <!-- 打包方式 -->
+    <packaging>pom</packaging>
+
+    <!-- 继承父 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+
+    <!-- 在properties下声明相应的版本信息，然后在dependency下引用的时候用${spring-version}就可以引入该版本jar包了 -->
+    <properties>
+        <module.name>${project.artifactId}</module.name>
+        <!-- 编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- jdk -->
+        <java.version>1.8</java.version>
+        <!-- swagger -->
+        <!-- pringfox-swagger2依然是依赖OSA规范文档，也就是一个描述API的json文件 -->
+        <!-- 而这个组件的功能就是帮助我们自动生成这个json文件 -->
+        <!-- 我们会用到的另外一个组件springfox-swagger-ui就是将这个json文件解析出来 -->
+        <!-- 用一种更友好的方式呈现出来 -->
+        <springfox.version>2.7.0</springfox.version>
+    </properties>
+
+    <!-- 加入依赖 -->
+    <dependencies>
+        <!-- springboot 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 自动生成get，set方法 依赖 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- springboot 测试依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- swagger 依赖 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 插件依赖 -->
+    <build>
+        <resources>
+            <!-- 打包时 maven 默认只打包 src/main/resource 下的资源 -->
+            <!-- 这里自定义要打包的资源文件的路径，一般是 Mapper 文件的位置 -->
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+</project>

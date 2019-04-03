@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zwc.base.mapper.SpringbootSwaggerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="SpringbootSwagger">
+        <id column="id" property="id" />
+        <result column="type" property="type" />
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, type , name , description
+    </sql>
+
+    <!-- 分页查询测试表数据 -->
+    <select id="query" resultType="com.zwc.base.dto.response.SpringbootSwaggerResponseDTO">
+        select
+        <include refid="Base_Column_List" />
+        from springboot_swagger
+        <include refid="BASE_WHERE" />
+    </select>
+
+    <!-- 通用查询条件 -->
+    <sql id="BASE_WHERE">
+        <where>
+            <if test="data.type != null and data.type != ''">
+                AND type = #{data.type}
+            </if>
+            <if test="data.name != null and data.name != ''">
+                AND name = #{data.name}
+            </if>
+            <if test="data.description != null and data.description != ''">
+                AND description = #{data.description}
+            </if>
+        </where>
+    </sql>
+</mapper>
