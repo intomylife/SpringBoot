@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zwc.user.mapper.SpringbootUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="SpringbootUser">
+        <id column="id" property="id" />
+        <result column="regoin_id" property="regoinId" />
+        <result column="name" property="name" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, regoin_id , name
+    </sql>
+
+    <!-- 通用查询条件 -->
+    <sql id="BASE_WHERE">
+        <where>
+            <if test="data.regoinId != null">
+                AND regoin_id = #{data.regoinId}
+            </if>
+            <if test="data.name != null and data.name != ''">
+                AND name = #{data.name}
+            </if>
+        </where>
+    </sql>
+
+</mapper>

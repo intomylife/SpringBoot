@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zwc.base.mapper.SpringbootBaseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="SpringbootBase">
+        <id column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="region_name" property="regionName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, parent_id , region_name
+    </sql>
+
+    <!-- 通用查询条件 -->
+    <sql id="BASE_WHERE">
+        <where>
+            <if test="data.parentId != null">
+                AND parent_id = #{data.parentId}
+            </if>
+            <if test="data.regionName != null and data.regionName != ''">
+                AND region_name = #{data.regionName}
+            </if>
+        </where>
+    </sql>
+
+</mapper>

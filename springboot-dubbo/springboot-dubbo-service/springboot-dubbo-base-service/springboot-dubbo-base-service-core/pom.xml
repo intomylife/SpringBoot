@@ -42,6 +42,11 @@
             <artifactId>springboot-dubbo-base-service-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.zwc</groupId>
+            <artifactId>springboot-dubbo-user-service-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <!-- 插件依赖 -->

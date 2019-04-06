@@ -1,0 +1,24 @@
+#server:
+#  port: 8082
+#
+#spring:
+#  datasource:
+#    driver: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/user_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=PRC&useSSL=false
+#    username: root
+#    password: 123456
+#
+#logging:
+#  level:
+#    com.zwc.user.mapper: debug
+#
+#dubbo:
+#  registry:
+#      address: zookeeper://127.0.0.1:2181
+#  application:
+#    name: springboot-dubbo-user-service
+#  protocol:
+#    name: dubbo
+#    port: -1
+#  consumer:
+#    timeout: 100000
