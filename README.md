@@ -11,3 +11,6 @@
 
 ### SpringBoot 整合 mongodb
 > 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89018869](https://blog.csdn.net/qq_41402200/article/details/89018869)
+
+### SpringBoot 整合 dubbo
+> 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89072962](https://blog.csdn.net/qq_41402200/article/details/89072962)
