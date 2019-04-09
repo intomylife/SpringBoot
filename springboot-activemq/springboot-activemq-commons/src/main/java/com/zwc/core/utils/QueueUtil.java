@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 /**
  * @ClassName QueueUtil
- * @Desc TODO   queue 列队模式发送消息工具类
+ * @Desc TODO   queue 队列模式发送消息工具类
  * @Date 2019/4/8 15:57
  * @Version 1.0
  */

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @ClassName MqQueueController
- * @Desc TODO   发送列队消息 - 前端控制器
+ * @Desc TODO   发送队列消息 - 前端控制器
  * @Date 2019/4/8 17:30
  * @Version 1.0
  */
@@ -21,7 +21,7 @@ public class MqQueueController {
 
     /*
      * @ClassName MqQueueController
-     * @Desc TODO   发送列队消息
+     * @Desc TODO   发送队列消息
      * @Date 2019/4/8 17:32
      * @Version 1.0
      */

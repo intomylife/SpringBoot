@@ -69,14 +69,14 @@ public class ActiveMQConfig {
     }
 
     /*
-     *  有两种消息类型：queue-列队 / topic-订阅
+     *  有两种消息类型：queue-队列 / topic-订阅
      *  使用 pub-sub-domain 属性控制消息类型
      *  true：topic消息，false：Queue消息
      */
 
     /*
      * @ClassName ActiveMQConfig
-     * @Desc TODO   在读取列队消息时需要配置此 bean（ PubSubDomain 默认为就是 false，可以不用配置）
+     * @Desc TODO   在读取队列消息时需要配置此 bean（ PubSubDomain 默认为就是 false，可以不用配置）
      * @Date 2019/4/9 11:01
      * @Version 1.0
      */
@@ -91,7 +91,7 @@ public class ActiveMQConfig {
 
     /*
      * @ClassName ActiveMQConfig
-     * @Desc TODO   列队模式，设置 pub-sub-domain 为 false
+     * @Desc TODO   队列模式，设置 pub-sub-domain 为 false
      * @Date 2019/4/8 16:51
      * @Version 1.0
      */
@@ -134,7 +134,7 @@ public class ActiveMQConfig {
 
     /*
      * @ClassName ActiveMQConfig
-     * @Desc TODO   把 queue 列队模式发送消息工具类注入到 spring 中
+     * @Desc TODO   把 queue 队列模式发送消息工具类注入到 spring 中
      * @Date 2019/4/8 17:05
      * @Version 1.0
      */

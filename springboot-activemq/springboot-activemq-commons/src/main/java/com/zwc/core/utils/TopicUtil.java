@@ -25,7 +25,7 @@ public class TopicUtil {
     /*
      * @ClassName QueueUtil
      * @Desc TODO   发送一条消息到指定的订阅者
-     * @param  queueName 队列名称
+     * @param  queueName 订阅者名称
      * @param  message 消息内容
      * @Date 2019/4/8 16:36
      * @Version 1.0
