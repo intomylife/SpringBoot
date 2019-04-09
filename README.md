@@ -6,11 +6,14 @@
 ### SpringBoot 整合 MyBatis-Plus
 > 博客地址：[https://blog.csdn.net/qq_41402200/article/details/88891511](https://blog.csdn.net/qq_41402200/article/details/88891511)
 
-### SpringBoot 整合 redis
+### SpringBoot 整合 Redis
 > 博客地址：[https://blog.csdn.net/qq_41402200/article/details/88952520](https://blog.csdn.net/qq_41402200/article/details/88952520)
 
-### SpringBoot 整合 mongodb
+### SpringBoot 整合 MongoDB
 > 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89018869](https://blog.csdn.net/qq_41402200/article/details/89018869)
 
-### SpringBoot 整合 dubbo
+### SpringBoot 整合 Dubbo
 > 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89072962](https://blog.csdn.net/qq_41402200/article/details/89072962)
+
+### SpringBoot 整合 ActiveMQ
+> 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89144897](https://blog.csdn.net/qq_41402200/article/details/89144897)
