@@ -62,8 +62,11 @@ public class RedisClient {
      * @Version 1.0
      */
     public Object get(String key){
-        redisTemplate.getExpire(key);
-        return redisTemplate.opsForValue().get(key);
+        if(redisTemplate.hasKey(key)){
+            return redisTemplate.opsForValue().get(key);
+        }else{
+            return null;
+        }
     }
 
     /*
