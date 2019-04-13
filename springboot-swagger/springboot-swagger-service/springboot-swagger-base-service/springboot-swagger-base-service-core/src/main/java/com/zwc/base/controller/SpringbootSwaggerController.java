@@ -32,48 +32,48 @@ public class SpringbootSwaggerController {
 
     /*
      * @ClassName SpringbootSwaggerController
-     * @Desc TODO   新增用户信息
+     * @Desc TODO   新增信息
      * @Date 2019/4/3 14:38
      * @Version 1.0
      */
     @RequestMapping(value = "/add" , method = RequestMethod.POST)
-    @ApiOperation(value = "新增用户信息")
+    @ApiOperation(value = "新增信息")
     public String add(SpringbootSwaggerRequestAddDTO springbootSwaggerRequestAddDTO){
         return springbootSwaggerService.add(springbootSwaggerRequestAddDTO);
     }
 
     /*
      * @ClassName SpringbootSwaggerController
-     * @Desc TODO   根据 id 删除用户信息 ， 使用 @ApiParam 注解添加字段的描述，参数是否必填以 @ApiParam 注解中的 required 值为准
+     * @Desc TODO   根据 id 删除信息 ， 使用 @ApiParam 注解添加字段的描述，参数是否必填以 @ApiParam 注解中的 required 值为准
      * @Date 2019/4/3 14:56
      * @Version 1.0
      */
     @RequestMapping(value = "/delete/{id}" , method = RequestMethod.GET)
-    @ApiOperation(value = "根据 id 删除用户信息")
-    public String delete(@ApiParam(value = "用户 id" , required = true) @PathVariable(value = "id" , required = true) long id){
+    @ApiOperation(value = "根据 id 删除信息")
+    public String delete(@ApiParam(value = "主键 id" , required = true) @PathVariable(value = "id" , required = true) long id){
         return springbootSwaggerService.delete(id);
     }
 
     /*
      * @ClassName SpringbootSwaggerController
-     * @Desc TODO   更新用户信息
+     * @Desc TODO   更新信息
      * @Date 2019/4/3 15:03
      * @Version 1.0
      */
     @RequestMapping(value = "/update" , method = RequestMethod.POST)
-    @ApiOperation(value = "更新用户信息")
+    @ApiOperation(value = "更新信息")
     public String update(SpringbootSwaggerRequestDTO springbootSwaggerRequestDTO){
         return springbootSwaggerService.update(springbootSwaggerRequestDTO);
     }
 
     /*
      * @ClassName SpringbootSwaggerController
-     * @Desc TODO   分页查询用户信息（不指定请求类型）
+     * @Desc TODO   分页查询信息
      * @Date 2019/4/3 14:02
      * @Version 1.0
      */
     @RequestMapping(value = "/pageUser" , method = RequestMethod.POST)
-    @ApiOperation(value = "分页查询用户信息")
+    @ApiOperation(value = "分页查询信息")
     public Page<SpringbootSwaggerResponseDTO> pageUser(SpringbootSwaggerRequestQueryDTO springbootSwaggerRequestQueryDTO){
         return springbootSwaggerService.getDataByPage(springbootSwaggerRequestQueryDTO);
     }
