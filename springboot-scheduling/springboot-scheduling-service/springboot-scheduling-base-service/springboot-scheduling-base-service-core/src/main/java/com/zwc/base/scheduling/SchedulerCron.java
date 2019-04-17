@@ -29,4 +29,15 @@ public class SchedulerCron {
         System.out.println("SchedulerCron ---> cron() 方法执行了：" + sdf.format(new Date()));
     }
 
+    /*
+     * @ClassName SchedulerCron
+     * @Desc TODO   明确指定一个时间点执行，配置格式为：[秒] [分] [小时] [日] [月] [周] [年]
+     * @Date 2019/4/17 10:58
+     * @Version 1.0
+     */
+    @Scheduled(cron = "0 0 11 * * ?")
+    public void cronTimePoint(){
+        System.out.println("SchedulerCron ---> cronTimePoint() 方法执行了：" + sdf.format(new Date()));
+    }
+
 }
