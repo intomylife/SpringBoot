@@ -23,3 +23,6 @@
 
 ### SpringBoot 整合 Swagger
 > 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89280513](https://blog.csdn.net/qq_41402200/article/details/89280513)
+
+### SpringBoot - Scheduling
+> 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89352147](https://blog.csdn.net/qq_41402200/article/details/89352147)
