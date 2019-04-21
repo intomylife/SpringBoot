@@ -19,7 +19,7 @@ public class KafkaConsumerOne {
      * @Date 2019/4/20 19:50
      * @Version 1.0
      */
-    @KafkaListener(topics = KafkaConstants.KAFKA_TOPIC_NAME , groupId = KafkaConstants.KAFKA_GROUP_ID)
+    @KafkaListener(topics = KafkaConstants.KAFKA_TOPIC_NAME , groupId = KafkaConstants.KAFKA_GROUP_ID_ONE)
     public void receiveTopicMessage(String message){
         System.out.println("KafkaConsumerOne ---> receiveTopicMessage：接收订阅者模式发送的消息，内容为：" + message);
     }
