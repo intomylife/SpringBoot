@@ -26,3 +26,6 @@
 
 ### SpringBoot - Scheduling
 > 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89352147](https://blog.csdn.net/qq_41402200/article/details/89352147)
+
+### SpringBoot 整合 Kafka
+> 博客地址：[https://blog.csdn.net/qq_41402200/article/details/89432711](https://blog.csdn.net/qq_41402200/article/details/89432711)
