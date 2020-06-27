@@ -18,11 +18,11 @@
 
 ------
 
-### 简介
+## 简介
 
 本仓库整合了一些工作中经常用到的一些技术。目前深度较浅，但会持续更新，并且会慢慢加深。
 
-### 文档
+## 文档
 
 * 数据库相关
 
@@ -52,37 +52,37 @@
 
 * ...
 
-### 对于项目结构的一些说明
+## 对于项目结构的一些说明
 
-#### 前言
+### 前言
 
-有朋友说出了一些疑问：
+**有朋友说出了一些疑问：**
 
 > 为什么有些工程里没有任何代码，是有什么特别的用途或者意义吗？
 
-我的回答是：
+**我的回答是：**
 
 > 可以看出，所有的相关整合我都是用的一种结构，这种结构其实是可以适用于 **Dubbo** 和 **微服务** 架构的，也是出于习惯，即使有些单个的技术点可能只需用到一两个类文件，我也是“不厌其烦”，更或者说是想保持一种统一的风格，就还是把所有的目录结构全部新建上去。
 
-不过，最近我发现了一个很尴尬的事情：
+**不过，最近我发现了一个很尴尬的事情：**
 
 > 原来提交代码的时候，Git 自动把空目录过滤了！也就是空目录压根没有提交上来，内心瞬间“五味杂陈”（笑 cry）。瞬间想到，原来问我的是：大兄弟提交的空目录是干啥的？随后我花了一天的时间把所有的空目录补回来了：[48eaf58](https://github.com/intomylife/SpringBoot/commit/48eaf5824d136ee32de30c39510724f1ea5cbccb)，[8023f4a](https://github.com/intomylife/SpringBoot/commit/8023f4a14b56b42495942a925b44edfa77a08d05)，[240335a](https://github.com/intomylife/SpringBoot/commit/240335a9f9206568d829a73c669280713b8f7d4a)，[6ed2fa7](https://github.com/intomylife/SpringBoot/commit/6ed2fa7b5af85fdbf5d173a183aef0238a999c69)，[23c90c3](https://github.com/intomylife/SpringBoot/commit/23c90c34b64676b878b470288b9507a89b444914)，[1b1309e](https://github.com/intomylife/SpringBoot/commit/1b1309ec88a4cd308d1ba1d60aa1498f82d18ded)，[630e879](https://github.com/intomylife/SpringBoot/commit/630e87936066fb0a6adbc3b57e1f586c871f8a2f)，[9e2376a](https://github.com/intomylife/SpringBoot/commit/9e2376acd5bdeff1c382cd6e649d83c94f19dfab)，[6a90702](https://github.com/intomylife/SpringBoot/commit/6a90702fc74306b30bd316296ca17b8f2416a3b0)
 
-#### 结构
+### 结构
 
-最外层目录：
+**最外层目录：**
 
 * xxx-commons：公用工程，用来引入公共的依赖，编写默认初始的配置信息，对应的工具类，以及统一返回实体类等等能抽取出来的一切公用代码。比如当项目中需要使用`Redis`做缓存，这时首先会在此工程中引入`Redis`的依赖`spring-boot-starter-data-redis`；其次编写`Redis`默认的最大连接数，连接超时时间等这些配置信息；然后考虑到兼容还需要统一解决序列化问题；最后把一些频繁使用的`Redis`操作封装到工具类中来简化调用。
 
 * xxx-service：聚合服务工程，用来指定`SpringBoot`版本信息，配置部署信息，以及包含所需的所有子模块。也就是说这个父工程是没有其他代码的，主要就只有一个`pom.xml`文件。
 
-xxx-service：
+**xxx-service：**
 
 * 包含各种模块，比如**用户模块**，**订单模块**等等
 
 * 从当前的 [SpringBoot 整合各类框架和应用](https://github.com/intomylife/SpringBoot) 中的服务之间调用使用`Dubbo`，到后来的 [简单了解微服务](https://github.com/intomylife/SpringCloud) 中的服务之间调用使用`服务注册与发现`，项目结构都是 **xxx-commons** + **xxx-service**
 
-xxx-service-api：
+**xxx-service-api：**
 
 * 每个模块中的“接口”工程
 
@@ -101,7 +101,7 @@ xxx-service-api：
  - dto              ## 扩展实体类
 ```
 
-xxx-service-core：
+**xxx-service-core：**
 
 * 每个模块的“核心”工程
 
@@ -135,11 +135,11 @@ xxx-service-core：
  - api          ## 被其他服务远程调用
 ```
 
-其他：
+**其他：**
 
 可能之前有些项目结构不是和上面所描述的一致，但是现在开始往后的都会以这个为标准来搭建
 
-### 联系我
+## 联系我
 
 > 如果您有任何疑问，或者有宝贵的建议，欢迎提交 [issues](https://github.com/intomylife/SpringBoot/issues)。
 
@@ -147,7 +147,7 @@ xxx-service-core：
 
 * Email: intomylife@foxmail.com
 
-### 关于我
+## 关于我
 
 * 个人博客：https://www.zouwencong.com
 
